@@ -81,7 +81,7 @@
  *
  * For details on the use of these macros, see the queue(3) manual page.
  *
- *                      SLIST    LIST  STAILQ   TAILQ CIRCLEQ
+ *                        SLIST    LIST   STAILQ  TAILQ  CIRCLEQ
  *
  * _HEAD                    +       +       +       +       +
  * _HEAD_INITIALIZER        +       +       +       +       +
@@ -89,12 +89,15 @@
  *
  * _INIT                    +       +       +       +       +
  * _INSERT_HEAD             +       +       +       +       +
+ * _INSERT_TAIL             -       -       +       +       +
  * _INSERT_BEFORE           -       +       -       +       +
  * _INSERT_AFTER            +       +       +       +       +
- * _INSERT_TAIL             -       -       +       +       +
  * _CONCAT                  -       -       +       +       -
  * _REMOVE_HEAD             +       -       +       -       -
- * _REMOVE_HEAD_UNTIL       +       -       +       -       -
+ * _REMOVE_HEAD_UNTIL       -       -       +       -       -
+ * _REMOVE_TAIL             -       -       -       -       -
+ * _REMOVE_TAIL_UNTIL       -       -       -       -       -
+ * _REMOVE_BEFORE           -       -       -       -       -
  * _REMOVE_AFTER            +       -       +       -       -
  * _REMOVE                  +       +       +       +       +
  * _REPLACE                 -       +       -       +       +

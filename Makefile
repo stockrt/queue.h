@@ -1,7 +1,7 @@
 CC = gcc
 CFLAGS = -Wall -g
 LIBS = -lm
-SRCS = sample.c
+SRCS = sample.c sample-multi.c
 OUTS = $(SRCS:.c=)
 
 .PHONY: all clean rebuild

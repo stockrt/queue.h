@@ -430,7 +430,7 @@
         qual type *tqh_first; /* first element */                            \
         qual type *qual *tqh_last; /* addr of last next element */           \
     }
-#define TAILQ_HEAD(name, type) _TAILQ_HEAD(name, struct type)
+#define TAILQ_HEAD(name, type) _TAILQ_HEAD(name, struct type,)
 
 #define TAILQ_HEAD_INITIALIZER(head) { TAILQ_END(head), &(head).tqh_first }
 
@@ -439,7 +439,7 @@
         qual type *tqe_next; /* next element */                              \
         qual type *qual *tqe_prev; /* address of previous next element */    \
     }
-#define TAILQ_ENTRY(type) _TAILQ_ENTRY(struct type)
+#define TAILQ_ENTRY(type) _TAILQ_ENTRY(struct type,)
 
 /*
  * Tail Queue functions.

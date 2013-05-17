@@ -1,3 +1,8 @@
+/*
+ * Created: May 15, 2013
+ * Author: Rogério Carvalho Schneider <stockrt@gmail.com>
+ */
+
 #include <limits.h>
 
 long int I_SEED = 123456789;

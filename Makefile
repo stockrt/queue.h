@@ -1,3 +1,6 @@
+# Created: May 15, 2013
+# Author: Rogério Carvalho Schneider <stockrt@gmail.com>
+
 CC = gcc
 CFLAGS = -Wall -g
 LIBS = -lm

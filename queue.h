@@ -28,7 +28,8 @@
  */
 
 /*
- * Modified by Rogério Carvalho Schneider <stockrt@gmail.com>
+ * Modified: May 15, 2013
+ * Author: Rogério Carvalho Schneider <stockrt@gmail.com>
  *
  * Mainly indentation, some new features, automatic feature table update, and
  * working samples with tests.

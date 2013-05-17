@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Created: May 15, 2013
+# Author: Rogério Carvalho Schneider <stockrt@gmail.com>
+
 set -u
 
 types="$(cat types.txt)"

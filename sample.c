@@ -1,3 +1,8 @@
+/*
+ * Created: May 15, 2013
+ * Author: Rogério Carvalho Schneider <stockrt@gmail.com>
+ */
+
 #include <stdio.h>
 #include <stdlib.h>
 #include "shannon.c"

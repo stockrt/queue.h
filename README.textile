@@ -1,0 +1,7 @@
+h2. queue.h
+
+Revised BSD's queue.h.
+
+Include samples on how to use data structures such as linked lists and tail queues provided by this nice Unix API called queue.h.
+
+Kudos to the Berkeley University guys that originally wrote this header file back in the day, from behind the trenches.

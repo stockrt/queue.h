@@ -17,8 +17,7 @@ struct data_s {
 // Node with a pointer to the actual data.
 typedef struct tailqnode_s tailqnode_t;
 struct tailqnode_s {
-    data_t *dp;
-    //void *dp;
+    void *dp;
     TAILQ_ENTRY(tailqnode_s) entries;
 };
 
@@ -62,25 +61,29 @@ int main(int argc, char *argv[]) {
 
     // Read1.
     TAILQ_FOREACH(nodep, &first_head, entries) {
-        printf("Read1 first_head: %d\n", nodep->dp->value);
+        datap = (data_t *) nodep->dp;
+        printf("Read1 first_head: %d\n", datap->value);
     }
     TAILQ_FOREACH(nodep, &second_head, entries) {
-        printf("Read1 second_head: %d\n", nodep->dp->value);
+        datap = (data_t *) nodep->dp;
+        printf("Read1 second_head: %d\n", datap->value);
     }
     printf("\n");
 
     // Read2 (remove).
     while (!TAILQ_EMPTY(&first_head)) {
         nodep = TAILQ_FIRST(&first_head);
-        printf("Read2 first_head: %d\n", nodep->dp->value);
+        datap = (data_t *) nodep->dp;
+        printf("Read2 first_head: %d\n", datap->value);
         TAILQ_REMOVE(&first_head, nodep, entries);
         free(nodep);
     }
     while (!TAILQ_EMPTY(&second_head)) {
         nodep = TAILQ_FIRST(&second_head);
-        printf("Read2 second_head: %d\n", nodep->dp->value);
+        datap = (data_t *) nodep->dp;
+        printf("Read2 second_head: %d\n", datap->value);
         TAILQ_REMOVE(&second_head, nodep, entries);
-        free(nodep->dp);
+        free(datap);
         free(nodep);
     }
 
